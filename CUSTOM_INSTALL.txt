@@ -1,19 +1,14 @@
 Instructions to intall dwm:
 
-- add dwm session to X at /usr/share/xsessions:
+- add dwm session to X at /usr/share/xsessions/dwm.desktop
+
 [Desktop Entry]
 Encoding=UTF-8
-Name=dwm
-Comment=Dynamic window manager
-Exec=/usr/local/bin/startdwm
+Name=DWM
+Exec=/home/valde/.dwm/startdwm
 Icon=dwm
 Type=XSession
 
 - create ~/dwm/logs dir
 
-- add start script at /usr/local/bin/startdwm
-#!/bin/sh
-while true; do
-    # Log stderror to a file
-    dwm 2> ~/dwm/logs/$(date +%Y-%m-%d_%H.dwm.log)
-done
+- create .dwm at home and add its contents
