@@ -1,0 +1,19 @@
+Instructions to intall dwm:
+
+- add dwm session to X at /usr/share/xsessions:
+[Desktop Entry]
+Encoding=UTF-8
+Name=dwm
+Comment=Dynamic window manager
+Exec=/usr/local/bin/startdwm
+Icon=dwm
+Type=XSession
+
+- create ~/dwm/logs dir
+
+- add start script at /usr/local/bin/startdwm
+#!/bin/sh
+while true; do
+    # Log stderror to a file
+    dwm 2> ~/dwm/logs/$(date +%Y-%m-%d_%H.dwm.log)
+done
