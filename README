@@ -20,6 +20,22 @@ necessary as root):
 
 
 Running dwm
+
+Custom config
+
+- add dwm session to X at /usr/share/xsessions/dwm.desktop
+
+[Desktop Entry]
+Encoding=UTF-8
+Name=DWM
+Exec=/home/valde/.dwm/startdwm
+Icon=dwm
+Type=XSession
+
+- create ~/dwm/logs dir
+
+- create .dwm at home and add its contents
+
 -----------
 Add the following line to your .xinitrc to start dwm using startx:
 
